@@ -5,4 +5,4 @@
 -   Allowlist
 -   Max quantity 3000
 
-Contract: `0x063BB54Ed128ae4c044739d50c1836dB4ce4Ff86` on Polygon Mumbai
+Contract: `0x8fe4dE01854B1AaE58e75caf7D8A73cC88F75bCd` on Polygon Mumbai
