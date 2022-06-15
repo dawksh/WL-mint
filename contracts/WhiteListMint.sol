@@ -11,7 +11,7 @@ import "@opengsn/contracts/src/BaseRelayRecipient.sol";
  * @dev Create a sample ERC721 standard token with WL functionality
  */
 
-contract WLERC721 is ERC721, Ownable, BaseRelayRecipient {
+contract WhitelistMint is ERC721, Ownable, BaseRelayRecipient {
     constructor(
         string memory tokenName,
         string memory tokenSymbol,
@@ -19,14 +19,14 @@ contract WLERC721 is ERC721, Ownable, BaseRelayRecipient {
         string memory _URI,
         address forwarder
     ) ERC721(tokenName, tokenSymbol) {
-        for (uint256 i = 0; i <= whitelistArray.length; i++) {
+        for (uint256 i = 0; i < whitelistArray.length; i++) {
             whitelistMap[whitelistArray[i]] = true;
         }
         baseURI = _URI;
         _setTrustedForwarder(forwarder);
     }
 
-    string public override versionRecipient = "2.2.0";
+    string public override versionRecipient = "1.0.0";
 
     mapping(address => bool) public whitelistMap;
     uint256 public maxSupply = 3000;
@@ -35,11 +35,10 @@ contract WLERC721 is ERC721, Ownable, BaseRelayRecipient {
     string private baseURI;
 
     function mint() public payable {
-        require(whitelistMap[msg.sender], "Not in Whitelist");
+        require(whitelistMap[_msgSender()], "Not in Whitelist");
         require(tokenId < maxSupply, "Collection Sold out!");
-        require(balanceOf(msg.sender) == 0, "Already Minted");
-        payable(owner()).transfer(msg.value);
-        _safeMint(msg.sender, tokenId);
+        require(balanceOf(_msgSender()) == 0, "Already Minted");
+        _safeMint(_msgSender(), tokenId);
         tokenId++;
     }
 

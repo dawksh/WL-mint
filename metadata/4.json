@@ -1,0 +1,72 @@
+{
+    "token_id": 27,
+    "name": "Companion #27",
+    "image": "https://companioninabox.art/api/companion.png?id=27&iteration=1",
+    "external_url": "https://companioninabox.art/companion/27",
+    "background_color": "c1b6a8",
+    "description": "Boxed in a small, wooden box, this companion is a bit of a mystery.",
+    "attributes": [
+        {
+            "display_type": "date",
+            "trait_type": "birthday",
+            "value": 1639767054423
+        },
+        {
+            "display_type": "date",
+            "trait_type": "updated",
+            "value": 1644013957601
+        },
+        {
+            "trait_type": "backgroundColor",
+            "value": "stone"
+        },
+        {
+            "trait_type": "skinColor",
+            "value": {}
+        },
+        {
+            "trait_type": "hairColor",
+            "value": "darkbrown"
+        },
+        {
+            "trait_type": "pose",
+            "value": {}
+        },
+        {
+            "trait_type": "gender",
+            "value": "f"
+        },
+        {
+            "trait_type": "hair",
+            "value": "long"
+        },
+        {
+            "trait_type": "brows",
+            "value": "thin"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "dart"
+        },
+        {
+            "trait_type": "nose",
+            "value": "wobble"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "subtlesmile"
+        },
+        {
+            "trait_type": "top",
+            "value": "jacket"
+        },
+        {
+            "trait_type": "bottom",
+            "value": "cropped"
+        },
+        {
+            "trait_type": "shoes",
+            "value": "hightops"
+        }
+    ]
+}

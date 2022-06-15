@@ -1,0 +1,80 @@
+{
+    "token_id": 23,
+    "name": "Companion #23",
+    "image": "https://companioninabox.art/api/companion.png?id=23&iteration=0",
+    "external_url": "https://companioninabox.art/companion/23",
+    "background_color": "e5dab3",
+    "description": "Boxed in a small, wooden box, this companion is a bit of a mystery.",
+    "attributes": [
+        {
+            "display_type": "date",
+            "trait_type": "birthday",
+            "value": 1640079182083
+        },
+        {
+            "display_type": "date",
+            "trait_type": "updated",
+            "value": 1642364130395
+        },
+        {
+            "trait_type": "backgroundColor",
+            "value": "sand"
+        },
+        {
+            "trait_type": "skinColor",
+            "value": {}
+        },
+        {
+            "trait_type": "hairColor",
+            "value": "black"
+        },
+        {
+            "trait_type": "pose",
+            "value": {}
+        },
+        {
+            "trait_type": "gender",
+            "value": "f"
+        },
+        {
+            "trait_type": "blemish",
+            "value": "blush"
+        },
+        {
+            "trait_type": "hair",
+            "value": "long"
+        },
+        {
+            "trait_type": "brows",
+            "value": "quote"
+        },
+        {
+            "trait_type": "eyes",
+            "value": "smile"
+        },
+        {
+            "trait_type": "nose",
+            "value": "button"
+        },
+        {
+            "trait_type": "mouth",
+            "value": "opensmile"
+        },
+        {
+            "trait_type": "eyewear",
+            "value": "rounded"
+        },
+        {
+            "trait_type": "top",
+            "value": "turtle"
+        },
+        {
+            "trait_type": "bottom",
+            "value": "waist"
+        },
+        {
+            "trait_type": "shoes",
+            "value": "sneaks"
+        }
+    ]
+}
