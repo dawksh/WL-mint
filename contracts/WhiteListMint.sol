@@ -5,6 +5,7 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@opengsn/contracts/src/BaseRelayRecipient.sol";
+import "@openzeppelin/contracts/utils/Strings.sol";
 
 /**
  * @title WLERC721
@@ -26,7 +27,9 @@ contract WhitelistMint is ERC721, Ownable, BaseRelayRecipient {
         _setTrustedForwarder(forwarder);
     }
 
-    string public override versionRecipient = "1.0.0";
+    function versionRecipient() external pure override returns (string memory) {
+        return "1";
+    }
 
     mapping(address => bool) public whitelistMap;
     uint256 public maxSupply = 3000;
@@ -34,7 +37,7 @@ contract WhitelistMint is ERC721, Ownable, BaseRelayRecipient {
 
     string private baseURI;
 
-    function mint() public payable {
+    function mint() public {
         require(whitelistMap[_msgSender()], "Not in Whitelist");
         require(tokenId < maxSupply, "Collection Sold out!");
         require(balanceOf(_msgSender()) == 0, "Already Minted");
@@ -93,7 +96,13 @@ contract WhitelistMint is ERC721, Ownable, BaseRelayRecipient {
         string memory currentBaseURI = _baseURI();
         return
             bytes(currentBaseURI).length > 0
-                ? string(abi.encodePacked(currentBaseURI, _tokenId, ".json"))
+                ? string(
+                    abi.encodePacked(
+                        currentBaseURI,
+                        Strings.toString(_tokenId),
+                        ".json"
+                    )
+                )
                 : "";
     }
 
